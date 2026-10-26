@@ -4,22 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-
-    <!-- 引入 CSS 样式文件 -->
+    <meta name="description" content="我的个人项目展示主页">
+    <title>MySpace | 个人项目主页</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header class="navbar">
+        <a class="logo" href="#">MySpace<span>.</span></a>
 
-    <div class="container">
-        <h1>欢迎点击我的主页！！！！</h1>
+        <nav aria-label="主导航">
+            <a href="#home">首页</a>
+            <a href="#projects">我的项目</a>
+            <a href="#about">关于我</a>
+        </nav>
 
-        <p id="message">这是一个简单的前端页面。</p>
+        <button id="themeBtn" class="theme-btn" type="button">
+            🌙 切换主题
+        </button>
+    </header>
 
-        <button id="changeBtn">点击我</button>
-    </div>
+    <main>
+        <section id="home" class="hero">
+            <p class="tag">WELCOME TO MY WEBSITE</p>
+            <h1>你好，我正在学习 <span>Web 开发。</span></h1>
+            <p class="hero-desc">
+                这是我的第一个前端练习项目，用来记录学习过程，
+                也用来测试 Git 的版本管理功能。
+            </p>
+            <a href="#projects" class="primary-btn">探索我的项目 ↓</a>
+        </section>
 
-    <!-- 引入 JavaScript 文件 -->
-    <script src="script.js"></script>
+        <section id="projects" class="projects section">
+            <div class="section-heading">
+                <p class="tag">MY WORK</p>
+                <h2>我的项目</h2>
+                <p>从简单的练习开始，一步步积累。</p>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <span class="project-icon">🌐</span>
+                    <h3>个人主页</h3>
+                    <p>使用 HTML 和 CSS 构建的响应式个人网站。</p>
+                    <span class="tech">HTML · CSS</span>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-icon">⚡</span>
+                    <h3>交互练习</h3>
+                    <p>使用 JavaScript 实现按钮交互与主题切换。</p>
+                    <span class="tech">JavaScript</span>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-icon">📦</span>
+                    <h3>Git 测试项目</h3>
+                    <p>练习代码修改、版本提交与远程仓库管理。</p>
+                    <span class="tech">Git · GitHub</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <p class="tag">ABOUT ME</p>
+            <h2>持续学习，持续进步。</h2>
+            <p>每一次提交，都是一次进步。</p>
+            <button id="helloBtn" class="primary-btn" type="button">
+                点击打个招呼
+            </button>
+            <p id="helloMessage" class="hello-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> MySpace. Built with HTML, CSS & JavaScript.</p>
+    </footer>
 </body>
 </html>

@@ -1,18 +1,27 @@
 
-/* 获取页面中的元素 */
-const message = document.getElementById("message");
-const changeBtn = document.getElementById("changeBtn");
+"use strict";
 
-/* 记录当前点击次数 */
-let count = 0;
+// 获取页面元素
+const themeBtn = document.getElementById("themeBtn");
+const helloBtn = document.getElementById("helloBtn");
+const helloMessage = document.getElementById("helloMessage");
+const yearElement = document.getElementById("year");
 
-/* 给按钮绑定点击事件 */
-changeBtn.addEventListener("click", function () {
-    count++;
+// 自动显示当前年份
+yearElement.textContent = new Date().getFullYear();
 
-    message.textContent = `你已经点击了 ${count} 次！`;
+// 切换浅色和深色主题
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
 
-    if (count >= 5) {
-        message.textContent = "你已经点击了 5 次，做得不错！";
-    }
+    const isDark = document.body.classList.contains("dark");
+
+    themeBtn.textContent = isDark
+        ? "☀️ 切换浅色"
+        : "🌙 切换主题";
+});
+
+// 点击按钮显示问候语
+helloBtn.addEventListener("click", () => {
+    helloMessage.textContent = "你好！继续加油，你的代码正在一点点进步 🚀";
 });
