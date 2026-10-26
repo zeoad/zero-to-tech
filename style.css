@@ -1,0 +1,51 @@
+
+/* 设置整个页面的基础样式 */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+}
+
+/* 主页内容卡片 */
+.container {
+    width: 80%;
+    max-width: 500px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1 {
+    color: #333333;
+    font-size: 28px;
+}
+
+/* 正文样式 */
+p {
+    color: #666666;
+    font-size: 16px;
+    margin: 24px 0;
+}
+
+/* 按钮样式 */
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6366f1;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 鼠标悬停效果 */
+button:hover {
+    background-color: #4f46e5;
+}
