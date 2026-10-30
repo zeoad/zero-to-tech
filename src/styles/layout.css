@@ -1,0 +1,32 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 75% 4%, color-mix(in srgb, var(--accent-color) 7%, transparent), transparent 35%),
+    var(--bg-primary);
+}
+
+.main-content {
+  flex: 1;
+}
+
+.container {
+  width: min(var(--page-width), calc(100% - var(--page-gutter) * 2));
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
