@@ -1,40 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { navigation, siteConfig } from "../data/site.js";
-import "./Navbar.css";
-
-export default function Navbar({ isLight, onToggleTheme }) {
-  return (
-    <header className="site-header">
-      <div className="navbar container">
-        <NavLink to="/" className="brand" aria-label="MySpace 首页">
-          {siteConfig.name}<span>.</span>
-        </NavLink>
-
-        <nav className="nav-links" aria-label="主导航">
-          {navigation.map((item) => (
-            <NavLink
-              key={item.id}
-              to={item.path}
-              end={item.path === "/"}
-              className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        <button
-          className="theme-toggle"
-          type="button"
-          onClick={onToggleTheme}
-          aria-label={isLight ? "切换到深色主题" : "切换到浅色主题"}
-          aria-pressed={isLight}
-        >
-          {isLight ? "☾" : "☀"}
-        </button>
-      </div>
-    </header>
-  );
-}
+import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
+import styles from "./Navbar.module.css";
+import {site} from "@/data/site";
+export default function Navbar(){return <header className={styles.header}><nav className={styles.nav} aria-label="主导航"><Link href="/" className={styles.brand}><span className={styles.mark}>M</span>{site.name}<span className={styles.dot}>.</span></Link><div className={styles.links}>{site.navigation.map(item=><Link href={item.href} key={item.href}>{item.label}</Link>)}<ThemeToggle/></div></nav></header>}

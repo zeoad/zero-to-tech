@@ -1,16 +1,1 @@
-export const profile = {
-  name: "MySpace",
-  introduction:
-    "我正在探索前端开发与人工智能，希望通过持续实践，把学到的知识转化为真正可用的项目。",
-  interests: [
-    "前端开发",
-    "大语言模型",
-    "RAG 检索",
-    "摄影与设计",
-  ],
-  stats: [
-    { id: "projects", value: "03+", label: "项目实践" },
-    { id: "fields", value: "02+", label: "探索方向" },
-    { id: "learning", value: "∞", label: "持续学习" },
-  ],
-};
+export const profile={name:"一名持续探索的开发者",introduction:"我是一名对数字技术保持好奇的学生，正在学习前端开发与人工智能。MySpace 是我的个人数字空间，用来整理学习过程、展示实践项目，也记录从想法到作品的每一步。",skills:["HTML","CSS","JavaScript","React","Next.js","Python","RAG","Git","Linux"]};

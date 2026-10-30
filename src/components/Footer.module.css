@@ -1,0 +1,1 @@
+.footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.78rem}.inner{width:min(1120px,calc(100% - 48px));margin:auto;display:flex;justify-content:space-between;gap:20px}.inner div{display:flex;gap:20px}.inner a:hover{color:var(--text)}@media(max-width:600px){.inner{width:calc(100% - 36px);flex-direction:column}}
